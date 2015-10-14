@@ -7,6 +7,8 @@ transpose('E2', '2M') // => 'F#2'
 transpose('F4', '3m') // => 'Ab4'
 ```
 
+This is piece of a complete music manipulation library called [tonal](https://github.com/danigb/tonal)
+
 ## Installation
 
 Install the npm module: `npm i --save pitch-transpose` and use it:
@@ -16,9 +18,11 @@ var transpose = require('pitch-transpose')
 transpose('3m', 'G') // => 'Bb'
 ```
 
-For browser environments you need browserify, webpack or a similar tool.
+For browser environments you need browserify, webpack or a similar tool (or use [tonal](https://github.com/danigb/tonal))
 
 ## Usage
+
+#### Pitch transposition
 
 The simplest usage is with a pitch and interval (the order doesn't matter):
 
@@ -27,11 +31,16 @@ transpose('C2', '4A') // => 'F#2'
 transpose('4A', 'C2') // => 'F#2'
 ```
 
-You can transpose pitch classes (pitches without octaves):
+### Pitch class transposition
+
+You can transpose pitch classes (pitches without octaves), and the returned value will be a pitch class:
 
 ```js
 tranpose('A', '3M') // => 'C#'
+tranpose('A5', '3M') // => 'C#5'
 ```
+
+### Transposers
 
 Also, you can partially apply to get a transposer:
 
@@ -40,11 +49,22 @@ var major3th = transpose('3M')
 major3th('D') // => 'F#'
 ```
 
-And this allows to work with arrays easily:
+### Work with pitch or interval arrays
+
+Partially applied transposers allows to work with arrays seamlessly:
 
 ```
 ['C', 'D', 'E', 'F', 'G'].map(transpose('3M')) // => ['E', 'F#', 'G#', 'A', 'B']
 ['1P', '3m', '5P'].map(transpose('C')) // => ['C', 'Eb', 'G']
+```
+
+### Using different interval or pitch representations
+
+This library can work with [pitches or intervals expressed as arrays](https://github.com/danigb/a-pitch):
+
+```js
+transpose([0, 1, 3], [2, 0, 0]) // => [3, 1, 3]
+// is the same as: transpose('C#3', '3M') => 'E#3'
 ```
 
 
