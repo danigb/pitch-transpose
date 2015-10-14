@@ -31,7 +31,7 @@ transpose('C2', '4A') // => 'F#2'
 transpose('4A', 'C2') // => 'F#2'
 ```
 
-### Pitch class transposition
+#### Pitch class transposition
 
 You can transpose pitch classes (pitches without octaves), and the returned value will be a pitch class:
 
@@ -40,7 +40,7 @@ tranpose('A', '3M') // => 'C#'
 tranpose('A5', '3M') // => 'C#5'
 ```
 
-### Transposers
+#### Transposers
 
 Also, you can partially apply to get a transposer:
 
@@ -49,7 +49,7 @@ var major3th = transpose('3M')
 major3th('D') // => 'F#'
 ```
 
-### Work with pitch or interval arrays
+#### Work with pitch or interval arrays
 
 Partially applied transposers allows to work with arrays seamlessly:
 
@@ -58,7 +58,7 @@ Partially applied transposers allows to work with arrays seamlessly:
 ['1P', '3m', '5P'].map(transpose('C')) // => ['C', 'Eb', 'G']
 ```
 
-### Using different interval or pitch representations
+#### Using different interval or pitch representations
 
 This library can work with [pitches or intervals expressed as arrays](https://github.com/danigb/a-pitch):
 
@@ -67,6 +67,7 @@ transpose([0, 1, 3], [2, 0, 0]) // => [3, 1, 3]
 // is the same as: transpose('C#3', '3M') => 'E#3'
 ```
 
+It should be quite easy to write a custom parser/builder. TODO: write an example.
 
 ## API
 
