@@ -1,0 +1,33 @@
+{
+  "name": "pitch-transpose",
+  "version": "0.1.0",
+  "description": "Simple and fast pitch transposition",
+  "main": "index.js",
+  "scripts": {
+    "test": "vows --spec test/*.js",
+    "docs": "docme README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/pitch-transpose.git"
+  },
+  "keywords": [
+    "pitch",
+    "transpose",
+    "tranposition",
+    "music",
+    "theory"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/pitch-transpose/issues"
+  },
+  "homepage": "https://github.com/danigb/pitch-transpose#readme",
+  "dependencies": {
+    "interval-parser": "^0.9.0",
+    "pitch-op": "^0.1.0",
+    "pitch-parser": "^0.1.0",
+    "vows": "^0.8.1"
+  }
+}
