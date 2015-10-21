@@ -17,22 +17,15 @@ var isArray = Array.isArray
  * tranpose([1, 0, 2], [3, -1, 0]) // => [3, 0, 2]
  */
 function transpose (interval, pitch) {
-  return op.add(interval, pitch)
+  var iArr = isArray(interval)
+  var pArr = isArray(pitch)
+  var i = iArr ? interval : parse(interval)
+  var p = pArr ? pitch : parse(pitch)
+  var sum = op.add(i, p)
+  return iArr && pArr ? sum : asPitch(sum)
 }
 
-function parse (src) {
-  if (isArray(src)) return src
-  return asPitch.parse(src) || asInterval.parse(src) || null
-}
-
-function translate (fn) {
-  return function (i, p) {
-    if (isArray(i) && isArray(p)) return fn(i, p)
-    var ai = parse(i)
-    var ap = parse(p)
-    return i !== null & p !== null ? asPitch.stringify(fn(ai, ap)) : null
-  }
-}
+function parse (p) { return asPitch(p) || asInterval(p) }
 
 function curry (fn) {
   return function (i, p) {
@@ -44,4 +37,4 @@ function curry (fn) {
   }
 }
 
-module.exports = curry(translate(transpose))
+module.exports = curry(transpose)

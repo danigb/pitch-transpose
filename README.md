@@ -1,5 +1,13 @@
 # pitch-transpose
 
+[![Build Status](https://travis-ci.org/danigb/pitch-transpose.svg?branch=master)](https://travis-ci.org/danigb/pitch-transpose)
+[![Test Coverage](https://codeclimate.com/github/danigb/pitch-transpose/badges/coverage.svg)](https://codeclimate.com/github/danigb/pitch-transpose/coverage)
+[![Code Climate](https://codeclimate.com/github/danigb/pitch-transpose/badges/gpa.svg)](https://codeclimate.com/github/danigb/pitch-transpose)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![npm](https://img.shields.io/npm/v/pitch-transpose.svg)](https://www.npmjs.com/package/pitch-transpose)
+[![array-notation](https://img.shields.io/badge/array--notation-compatible-yellow.svg)](https://github.com/danigb/pitch-array)
+
+
 Simple and fast pitch transposition:
 
 ```js
