@@ -53,6 +53,9 @@ vows.describe('transpose').addBatch({
       ['D5', 'E5', 'F#5', 'G5', 'A5', 'B5', 'C#6'])
       assert.deepEqual(notes.map(transpose('-9M')),
       ['Bb2', 'C3', 'D3', 'Eb3', 'F3', 'G3', 'A3'])
+    },
+    'no params': function () {
+      assert.equal(transpose(), null)
     }
   }
 }).export(module)

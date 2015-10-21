@@ -17,6 +17,7 @@ var isArray = Array.isArray
  * tranpose([1, 0, 2], [3, -1, 0]) // => [3, 0, 2]
  */
 function transpose (interval, pitch) {
+  if (arguments.length === 1) return function (p) { return transpose(interval, p) }
   var iArr = isArray(interval)
   var pArr = isArray(pitch)
   var i = iArr ? interval : parse(interval)
@@ -27,14 +28,4 @@ function transpose (interval, pitch) {
 
 function parse (p) { return asPitch(p) || asInterval(p) }
 
-function curry (fn) {
-  return function (i, p) {
-    switch (arguments.length) {
-      case 0: return curry(fn)
-      case 1: return function (p) { return fn(i, p) }
-      default: return fn(i, p)
-    }
-  }
-}
-
-module.exports = curry(transpose)
+module.exports = transpose

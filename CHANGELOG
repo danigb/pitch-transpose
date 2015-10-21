@@ -1,4 +1,11 @@
 CHANGELOG
 
-[Master]
+[0.2.0]
+- Less code
+- Update dependencies
+
+[0.1.0]
 - First working version
+
+DIST SIZE (normal/minified)
+[0.2.0] 15605 / 5305
