@@ -34,5 +34,8 @@
     "pitch-op": "^0.2.1",
     "pitch-parser": "^0.3.0",
     "vows": "^0.8.1"
+  },
+  "devDependencies": {
+    "teoria": "^2.1.1"
   }
 }

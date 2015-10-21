@@ -5,7 +5,7 @@ var op = require('pitch-op')
 var isArray = Array.isArray
 
 /**
- * Transposes pitch by an interval
+ * Transposes a pitch by an interval
  *
  * @param {String|Array} a - a pitch or interval in string or array notation
  * @param {String|Array} b - a pitch or interval in string or array notation
