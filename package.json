@@ -1,6 +1,6 @@
 {
   "name": "pitch-transpose",
-  "version": "0.2.0-pre",
+  "version": "0.1.1",
   "description": "Simple and fast pitch transposition",
   "main": "index.js",
   "scripts": {
